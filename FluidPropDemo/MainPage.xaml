@@ -11,7 +11,7 @@
 
     <Grid>
         <TextBlock fp:FluidProp.MinFontSize="20"
-                 fp:FluidProp.MaxFontSize="32"
+                 fp:FluidProp.MaxFontSize="100"
                    Text="Welcome to the NeXt level"/>
         
     </Grid>
