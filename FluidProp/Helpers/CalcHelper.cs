@@ -15,17 +15,7 @@ namespace FluidProp.Helpers
         internal static double CalculateNewValue(double maxValue, double minValue, double maxWidth, double minWidth = defaultMinWidth )
         {
             double currentWidth = Window.Current.Bounds.Width;
-            return (minValue + maxValue) * (currentWidth - minWidth) / (maxWidth - minWidth) + minValue;
+            return (maxValue - minValue) * (currentWidth - minWidth) / (maxWidth - minWidth) + minValue;
         }
-
-        //public double RangeValueFromPercent(double percent, double min, double max)
-        //{
-        //    return (max - min) * percent + min;
-        //}
-
-        //public double RangePercentFromValue(double value, double min, double max)
-        //{
-        //    return (value - min) / (max - min);
-        //}
     }
 }

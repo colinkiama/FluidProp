@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBlock fp:FluidProp.MinFontSize="20"
+        <TextBlock fp:FluidProp.MinFontSize="15"
                  fp:FluidProp.MaxFontSize="100"
                    Text="Welcome to the NeXt level"/>
         
