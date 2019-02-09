@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Graphics.Display;
@@ -44,7 +45,7 @@ namespace FluidProp
         {
             foreach (var item in attatchedObjects)
             {
-                if (item is Control)
+                if (IsSameOrSubclass(item.GetType(), typeof(Control)))
                 {
                     item.SetValue(Control.FontSizeProperty, UpdateValueForDependencyObject(item));
                 }
@@ -98,8 +99,14 @@ namespace FluidProp
             DependencyProperty.RegisterAttached("MaxFontSize", typeof(double), typeof(FluidProp), null);
 
 
-        
-        
+        public bool IsSameOrSubclass(Type potentialBase, Type potentialDescendant)
+        {
+            return potentialDescendant.GetTypeInfo().IsAssignableFrom(potentialBase.GetTypeInfo())
+                   || potentialDescendant == potentialBase;
+        }
+
+
+
 
 
 

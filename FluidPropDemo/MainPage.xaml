@@ -13,6 +13,8 @@
         <TextBlock fp:FluidProp.MinFontSize="15"
                  fp:FluidProp.MaxFontSize="100"
                    Text="Welcome to the NeXt level"/>
-        
+        <TextBox fp:FluidProp.MinFontSize="2"
+                 fp:FluidProp.MaxFontSize="44"/>
+
     </Grid>
 </Page>
